@@ -1,5 +1,6 @@
 <?php
 namespace Illuminate\Support\Facades;
+
 /**
  * @method static \Illuminate\Http\Request instance()
  * @method static string method()
@@ -42,7 +43,6 @@ namespace Illuminate\Support\Facades;
  *
  * @see \Illuminate\Http\Request
  */
-
 class Input extends Facade
 {
     /**
@@ -54,7 +54,7 @@ class Input extends Facade
      * @param  mixed   $default
      * @return mixed
      */
-    public static function get($key = null, $default = null)
+    public function get($key = null, $default = null)
     {
         return static::$app['request']->input($key, $default);
     }
